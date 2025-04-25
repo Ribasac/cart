@@ -8,6 +8,10 @@ export const AuthProvider = ({ children }) => {
 
     const signup = async (user) => {
         try {
+            if (!user.email.trim() || !user.password.trim()) {
+                console.log("blank");
+                throw new Error("blank");
+            }
             const signupResponse = await api.post("/auth/signup", user);
 
             if (signupResponse.data.token) {
@@ -27,6 +31,9 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
+            if (!email.trim() || !password.trim()) {
+                throw new Error("blank");
+            }
             const loginResponse = await api.post("/auth/login", {
                 email,
                 password,
