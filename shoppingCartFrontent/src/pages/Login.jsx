@@ -37,7 +37,7 @@ function Login() {
                     Login
                 </button>
             </div>
-            <a href="/signup">already have an account?</a>
+            <a href="/signup">dont have an account?</a>
         </div>
     );
 }
