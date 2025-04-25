@@ -1,0 +1,130 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.loginCard {
+    width: 560px;
+    height: 360px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+h1 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.loginInput {
+    width: 70%;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+.loginInput:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.loginButton {
+    background-color: #f0f0f0;
+    width: 124px;
+    margin: 32px 0;
+    height: 56px;
+}
+
+.products {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.productCard {
+    padding: 16px 32px;
+    background: #fff;
+    border-radius: 40px;
+    width: 280px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartButton {
+    padding: 8px 16px;
+    background-color: beige;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.cartButton:hover {
+    background-color: bisque;
+}
+
+.cartViewer {
+    position: absolute;
+    top: 32px;
+    padding: 8px 16px;
+    background-color: burlywood;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.logoutButton {
+    position: absolute;
+    top: 32px;
+    padding: 8px 16px;
+    background-color: burlywood;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    right: 172px;
+}
+
+.cart {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 36px 48px;
+    justify-content: space-between;
+    padding-top: 20%;
+}
+
+.cartItem {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartPrice {
+    width: 100%;
+    text-align: right;
+}
+
+.cartList {
+    display: flex;
+    flex-direction: column;
+    /* overflow: scroll; */
+}
