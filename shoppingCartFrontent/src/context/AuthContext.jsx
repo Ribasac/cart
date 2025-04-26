@@ -23,7 +23,12 @@ export const AuthProvider = ({ children }) => {
                 return token;
             }
         } catch (e) {
-            alert("Error occured", e);
+            alert(
+                "Error occured : " +
+                    (e.response?.data?.message !== undefined
+                        ? e.response.data.message
+                        : "blank values")
+            );
         }
 
         return null;
@@ -48,7 +53,11 @@ export const AuthProvider = ({ children }) => {
                 return token;
             }
         } catch (e) {
-            alert("error occured", e);
+            alert(
+                "Error occured : " + e.response?.data?.message != undefined
+                    ? e.response?.data?.message
+                    : "blank values"
+            );
         }
 
         return null;

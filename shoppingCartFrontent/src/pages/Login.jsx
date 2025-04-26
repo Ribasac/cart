@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
 function Login() {
@@ -16,6 +16,12 @@ function Login() {
         await login(email, password);
         navigate("/", { replace: true });
     };
+
+    const { isUser } = useContext(AuthContext);
+
+    if (isUser()) {
+        return <Navigate to="/" replace={true}></Navigate>;
+    }
 
     return (
         <div>

@@ -6,7 +6,7 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const { signup } = useContext(AuthContext);
+    const { signup, isUser } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -16,6 +16,10 @@ function Signup() {
         await signup({ email: email, password: password });
         navigate("/", { replace: true });
     };
+
+    if (isUser()) {
+        return <Navigate to="/" replace={true}></Navigate>;
+    }
 
     return (
         <div>
